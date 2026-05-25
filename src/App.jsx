@@ -30,20 +30,86 @@ export default function FinalPremiumQAPortfolioWebsite() {
     },
   ];
 
-  const skills = [
-    'Selenium',
-    'Java',
-    'Python',
-    'Postman',
-    'REST Assured',
-    'TestNG',
-    'JMeter',
-    'Playwright',
-    'Appium',
-    'Jira',
-    'MySQL',
-    'GitHub Actions',
-  ];
+const skillsData = [
+  {
+    title: "MANUAL TESTING",
+    icon: "🧪",
+    skills: [
+      "Functional",
+      "Regression",
+      "UAT",
+      "Exploratory",
+      "Integration",
+      "System",
+      "Cross-browser",
+    ],
+  },
+
+  {
+    title: "AUTOMATION",
+    icon: "⚙️",
+    skills: [
+      "Selenium",
+      "Playwright",
+      "TestNG",
+      "REST Assured",
+      "JMeter",
+      "Appium",
+    ],
+  },
+
+  {
+    title: "API & BACKEND",
+    icon: "💻",
+    skills: [
+      "Postman",
+      "REST API",
+      "MySQL",
+      "DB Validation",
+    ],
+  },
+
+  {
+    title: "TOOLS & TRACKING",
+    icon: "🛠️",
+    skills: [
+      "Jira",
+      "ClickUp",
+      "TestRail",
+      "Bugzilla",
+      "Qase",
+      "Sentry",
+      "Git",
+    ],
+  },
+
+  {
+    title: "LANGUAGES",
+    icon: "📘",
+    skills: [
+      "Java",
+      "Python",
+      "JavaScript",
+    ],
+  },
+
+  {
+  title: "CLOUD & QA PRACTICES",
+  icon: "☁️",
+  skills: [
+    "CI/CD",
+    "Jenkins",
+    "GitHub Actions",
+    "AWS",
+    "STLC",
+    "SDLC",
+    "BDD",
+    "POM",
+    "Bug Lifecycle",
+    "Agile",
+  ],
+},
+];
 
   const articles = [
     {
@@ -148,13 +214,13 @@ export default function FinalPremiumQAPortfolioWebsite() {
               </div>
 
               <div className="text-center min-w-[90px]">
-                <h3 className="text-3xl font-bold text-yellow-400">50+</h3>
-                <p className="text-xs text-gray-400 mt-1">Critical Defects Resolved</p>
+                <h3 className="text-3xl font-bold text-yellow-400">10+</h3>
+                <p className="text-xs text-gray-400 mt-1">Projects Worked On</p>
               </div>
 
               <div className="text-center min-w-[90px]">
                 <h3 className="text-3xl font-bold text-yellow-400">5+</h3>
-                <p className="text-xs text-gray-400 mt-1">Platforms Validated</p>
+                <p className="text-xs text-gray-400 mt-1">Platforms Tested</p>
               </div>
             </div>
           </div>
@@ -427,32 +493,73 @@ export default function FinalPremiumQAPortfolioWebsite() {
         </div>
       </section>
 
-      {/* Skills */}
-      <section className="bg-[#111827] py-28 px-6 border-y border-white/5">
+                 {/* Skills */}
+      <section
+        id="skills"
+        className="bg-[#111827] py-28 px-6 border-y border-white/5"
+      >
         <div className="max-w-7xl mx-auto">
+
           <p className="uppercase tracking-[0.4em] text-yellow-400 text-sm mb-5">
-            Skills & Certifications
+            TECH STACK
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-16">
-            Technical Expertise
+          <h2 className="text-4xl md:text-6xl font-black mb-6">
+            Technical Skills
           </h2>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <div className="grid grid-cols-2 gap-5">
-                {skills.map((skill) => (
-                  <div
-                    key={skill}
-                    className="bg-[#0b1120] border border-white/10 rounded-2xl px-5 py-4 hover:border-yellow-400/30 transition"
-                  >
-                    {skill}
-                  </div>
-                ))}
-              </div>
-            </div>
+          <p className="text-gray-400 text-lg leading-8 max-w-3xl mb-20">
+            A comprehensive toolkit I use to build, test, deploy and monitor
+            robust software solutions across Web, Mobile, API, Console,
+            and Automation ecosystems.
+          </p>
 
-            <div className="space-y-6">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+            {skillsData.map((category, index) => (
+              <div
+                key={index}
+                className="group bg-[#0b1120] border border-white/10 rounded-[32px] p-8 hover:border-yellow-400/30 hover:-translate-y-2 transition duration-300"
+              >
+
+                <div className="w-16 h-16 rounded-2xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition duration-300">
+                  {category.icon}
+                </div>
+
+                <h3 className="text-2xl font-bold text-yellow-400 mb-8">
+                  {category.title}
+                </h3>
+
+                <div className="flex flex-wrap gap-3">
+
+                  {category.skills.map((skill, idx) => (
+                    <span
+                      key={idx}
+                      className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-sm text-gray-300 hover:bg-yellow-400 hover:text-black transition duration-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+
+                </div>
+
+              </div>
+            ))}
+
+          </div>
+
+          <div className="mt-28">
+
+            <p className="uppercase tracking-[0.4em] text-yellow-400 text-sm mb-5">
+              Certifications
+            </p>
+
+            <h2 className="text-4xl md:text-5xl font-bold mb-16">
+              Learning & Credentials
+            </h2>
+
+            <div className="grid lg:grid-cols-2 gap-6">
+
               {[
                 '🤖 Anthropic Claude Certification — Anthropic · 2025',
                 '⚡ Claude Code in Action — Anthropic · 2025',
@@ -466,18 +573,26 @@ export default function FinalPremiumQAPortfolioWebsite() {
               ].map((cert) => (
                 <div
                   key={cert}
-                  className="bg-[#0b1120] border border-white/10 rounded-[28px] p-6 hover:border-yellow-400/30 transition"
+                  className="bg-[#0b1120] border border-white/10 rounded-[28px] p-6 hover:border-yellow-400/30 hover:-translate-y-1 transition duration-300"
                 >
-                  <h3 className="text-xl font-semibold leading-8">{cert}</h3>
+                  <h3 className="text-lg md:text-xl font-semibold leading-8">
+                    {cert}
+                  </h3>
                 </div>
               ))}
+
             </div>
+
           </div>
+
         </div>
       </section>
 
       {/* Contact */}
-      <section id="contact" className="max-w-5xl mx-auto px-6 py-28 text-center">
+      <section
+        id="contact"
+        className="max-w-5xl mx-auto px-6 py-28 text-center"
+      >
         <p className="uppercase tracking-[0.4em] text-yellow-400 text-sm mb-5">
           Contact
         </p>
@@ -488,10 +603,12 @@ export default function FinalPremiumQAPortfolioWebsite() {
 
         <p className="text-gray-400 text-lg leading-8 max-w-3xl mx-auto mb-12">
           Looking for a QA Engineer passionate about automation, software
-          quality, scalable testing, and reliable user experiences? Let’s connect.
+          quality, scalable testing, and reliable user experiences?
+          Let’s connect.
         </p>
 
         <div className="flex flex-wrap justify-center gap-5 mb-14">
+
           <button
             onClick={() => {
               window.location.href = 'mailto:mohdtayyabh39@gmail.com';
@@ -504,7 +621,11 @@ export default function FinalPremiumQAPortfolioWebsite() {
 
           <button
             onClick={() => {
-              window.open('https://github.com/MohdTayyabSaifi20', '_blank', 'noopener,noreferrer');
+              window.open(
+                'https://github.com/MohdTayyabSaifi20',
+                '_blank',
+                'noopener,noreferrer'
+              );
             }}
             type="button"
             className="border border-white/10 hover:border-yellow-400 hover:text-yellow-400 px-8 py-4 rounded-2xl font-semibold transition"
@@ -514,20 +635,27 @@ export default function FinalPremiumQAPortfolioWebsite() {
 
           <button
             onClick={() => {
-              window.open('https://www.linkedin.com/in/mohd-t-159404255/', '_blank', 'noopener,noreferrer');
+              window.open(
+                'https://www.linkedin.com/in/mohd-t-159404255/',
+                '_blank',
+                'noopener,noreferrer'
+              );
             }}
             type="button"
             className="border border-white/10 hover:border-yellow-400 hover:text-yellow-400 px-8 py-4 rounded-2xl font-semibold transition"
           >
             LinkedIn
           </button>
+
         </div>
 
         <div className="text-gray-500 text-sm space-y-2">
-          <p>mohdtayyab.dev</p>
-          <p>Premium QA Engineer Portfolio • Netlify Ready</p>
+          <p>mohdtayyabh39@gmail.com</p>
+          <p>QA Engineer/SDET</p>
         </div>
+
       </section>
+
     </div>
   );
 }
