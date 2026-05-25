@@ -219,7 +219,8 @@ const skillsData = [
               </div>
 
               <div className="text-center min-w-[90px]">
-                <p className="text-xs text-gray-400 mt-1">Web • Mobile • Console • Cross-Platform QA</p>
+                <h3 className="text-3xl font-bold text-yellow-400">5+</h3>
+                <p className="text-xs text-gray-400 mt-1">Environment Tested</p>
               </div>
             </div>
           </div>
