@@ -220,7 +220,7 @@ const skillsData = [
 
               <div className="text-center min-w-[90px]">
                 <h3 className="text-3xl font-bold text-yellow-400">5+</h3>
-                <p className="text-xs text-gray-400 mt-1">Environment Tested</p>
+                <p className="text-xs text-gray-400 mt-1">Platforms Tested</p>
               </div>
             </div>
           </div>
